@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 const LoginScreen = () => {
   const users = [
     {
@@ -44,38 +43,48 @@ const LoginScreen = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="login-container">
+      <h1 className="login-title">Login</h1>
 
-      <div className="login-Form">
+      <div className="login-form">
         <form onSubmit={handleLogin}>
-          <label htmlFor="email">Email</label>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
 
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+            <input
+              className="form-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-          <label htmlFor="password">Password</label>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
 
-          <input
-            type="password"
-            name="password"
-            id="password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+            <input
+              className="form-input"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
 
-          <button type="submit">Login</button>
+          <button className="login-button" type="submit">
+            Login
+          </button>
         </form>
 
-        {message && <p>{message}</p>}
-        {error && <p>{error}</p>}
+        {message && <p className="success-message">{message}</p>}
+        {error && <p className="error-message">{error}</p>}
       </div>
     </div>
   );

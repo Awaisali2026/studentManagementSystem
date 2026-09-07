@@ -1,16 +1,12 @@
 import { useState } from "react";
 import StudentStats from "./StudentStats";
 import StudentList from "./StudentList";
-import Navbar from "./Navbar";
-
 function StudentsManagement() {
   const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
 
   return (
     <>
-      <Navbar />
-
       <div className="app">
         <div className="container">
           <header className="header">

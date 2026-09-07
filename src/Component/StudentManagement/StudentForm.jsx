@@ -27,7 +27,7 @@ function StudentForm() {
 
     setName("");
     setMarks("");
-    navigate("/")
+    navigate("/admin/students")
   };
 
   return (
