@@ -1,6 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = [
+  {
+    id: 1,
+    studentId: 2,
+    courseId: 1
+  }
 
 ];
 

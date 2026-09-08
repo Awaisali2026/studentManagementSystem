@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const students = [
-  { id: 1, name: "Ali", marks: 85 },
-  { id: 2, name: "Sara", marks: 45 },
-  { id: 3, name: "Ahmed", marks: 72 },
+  { id: 1, name: "Ali", marks: 85 ,active: true },
+  { id: 2, name: "Sara", marks: 45, active: true  },
+  { id: 3, name: "Ahmed", marks: 72, active: true  },
 ];
 
 const studentSlice = createSlice({
@@ -23,9 +23,13 @@ const studentSlice = createSlice({
           : student,
       );
     },
+    ToggleActiveStudent: (state, action) => {
+      const student = state.find((student) => student.id === action.payload)
+      if(student) student.active = !student.active;
+    }
   },
 });
 
-export const { addStudent, deleteStudent, increaseMarks } =
+export const { addStudent, deleteStudent, increaseMarks, ToggleActiveStudent } =
   studentSlice.actions;
 export default studentSlice.reducer;

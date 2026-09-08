@@ -21,7 +21,7 @@ function MyCourses() {
   );
 
   const studentId =
-    loggedInStudent?.id || 1;
+    loggedInStudent?.id
 
 
   const myEnrollments = enrollments.filter(
@@ -107,7 +107,7 @@ function MyCourses() {
               style={{
                 backgroundColor: "#dc3545",
                 color: "white",
-                padding: "10px 15px",
+                padding: "15px 20px",
                 border: "none",
                 borderRadius: "5px",
                 cursor: "pointer",

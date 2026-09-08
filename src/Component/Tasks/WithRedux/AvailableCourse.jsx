@@ -13,10 +13,10 @@ function AvailableCourses() {
 
   const courses = useSelector((state) => state.courses);
 
+
   const enrollments = useSelector((state) => state.enrollment);
 
-
-  const studentId = loggedInStudent?.id || 1;
+  const studentId = loggedInStudent?.id
 
   const handleEnroll = (courseId) => {
   
@@ -36,7 +36,6 @@ function AvailableCourses() {
     );
 
     if (alreadyEnrolled) {
-      alert("You are already enrolled in this course.");
       return;
     }
 
@@ -51,7 +50,6 @@ function AvailableCourses() {
   
     dispatch(decrementSeat(courseId));
 
-    alert("Successfully enrolled!");
   };
 
   return (

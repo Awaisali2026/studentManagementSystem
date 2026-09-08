@@ -1253,3 +1253,7 @@ button {
 .Model-Button button:active {
   transform: translateY(0);
 }
+.btn-select{
+  background-color: white;
+  border: none;
+}

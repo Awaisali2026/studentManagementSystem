@@ -62,7 +62,7 @@ function CourseEnrollCard({
           style={{
             backgroundColor: "#007bff",
             color: "white",
-            padding: "10px 15px",
+            padding: "15px 20px",
             border: "none",
             borderRadius: "5px",
             cursor: "pointer",
