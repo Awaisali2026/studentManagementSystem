@@ -31,6 +31,7 @@ const MainNavbar = () => {
               <Link to="/student-dashboard">Student Dashboard</Link>
               <Link to="/student/available-courses">Available Courses </Link>
               <Link to="/student/my-course">My Courses</Link>
+              <Link to="/student/profile">My Profile</Link>
             </>
           )}
         </nav>

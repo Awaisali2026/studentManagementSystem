@@ -1,31 +1,24 @@
 import { useDispatch, useSelector } from "react-redux";
-import { deleteStudent, increaseMarks } from "../store/Features/StudentSlice";
+import {
+  deleteStudent,
+  increaseMarks,
+  ToggleActiveStudent,
+} from "../store/Features/StudentSlice";
 import { useState } from "react";
 
 function StudentCard({ student }) {
   const dispatch = useDispatch();
-  const students = useSelector((state) => state.students);
   const courses = useSelector((state) => state.courses);
   const enrollments = useSelector((state) => state.enrollment);
 
-  const [selectedStudentId, setSelectedStudentId] = useState(null);
+  const [showCourses, setShowCourses] = useState(false);
 
-  const selectedStudent = students.find(
-    (data) => data.id === selectedStudentId,
-  );
+  const enrolledCourses = enrollments
+    .filter((enrollment) => enrollment.studentId === student.id)
+    .map((enrollment) => courses.find((c) => c.id === enrollment.courseId))
+    .filter(Boolean);
 
-  const courseForSelectedStudent = selectedStudent
-    ? enrollments
-        .filter((enrollData) => enrollData.id === selectedStudentId)
-        .map((data) => courses.find((c) => c.id === data.courseId))
-        .filter(Boolean)
-    : [];
-
-  
   const passed = student.marks >= 50;
-
-  console.log(selectedStudentId)
-  console.log(courseForSelectedStudent)
 
   return (
     <article className="student-card">
@@ -33,7 +26,10 @@ function StudentCard({ student }) {
         <div className="avatar">{student.name.charAt(0).toUpperCase()}</div>
 
         <div className="student-info">
-          <button className="btn-select" onClick={() => setSelectedStudentId(student.id)}>
+          <button
+            className="btn-select"
+            onClick={() => setShowCourses((prev) => !prev)}
+          >
             <h3>{student.name}</h3>
             <span>Student #{student.id}</span>
           </button>
@@ -59,12 +55,50 @@ function StudentCard({ student }) {
         </div>
       </div>
 
+      <div className="active-status" style={{ margin: "10px 0" }}>
+        <span
+          style={{
+            padding: "3px 10px",
+            borderRadius: "12px",
+            fontSize: "12px",
+            color: "white",
+            backgroundColor: student.active ? "#28a745" : "#6c757d",
+          }}
+        >
+          {student.active ? "Active" : "Inactive"}
+        </span>
+      </div>
+
+      {showCourses && (
+        <div className="enrolled-courses" style={{ marginBottom: "10px" }}>
+          <strong>Enrolled Courses:</strong>
+          {enrolledCourses.length === 0 ? (
+            <p>No courses enrolled.</p>
+          ) : (
+            <ul>
+              {enrolledCourses.map((course) => (
+                <li key={course.id}>
+                  {course.title} — {course.instructor}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
+
       <div className="card-actions">
         <button
           className="increase-button"
           onClick={() => dispatch(increaseMarks(student.id))}
         >
           +5 Marks
+        </button>
+
+        <button
+          className="toggle-active-button"
+          onClick={() => dispatch(ToggleActiveStudent(student.id))}
+        >
+          {student.active ? "Deactivate" : "Activate"}
         </button>
 
         <button

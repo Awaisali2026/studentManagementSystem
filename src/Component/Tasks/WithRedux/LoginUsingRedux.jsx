@@ -2,14 +2,11 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {login} from "../../store/Features/AuthSlice"
+import { users } from "../../data/mockUsers";
 
 
 const LoginUsingRedux = () => {
 
-    const users = [ 
-  { id: 1, name: "Admin", email: "admin@test.com", password: "admin123", role: "admin" }, 
-  { id: 2, name: "Ali", email: "ali@test.com", password: "student123", role: "student" } 
-]; 
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
@@ -43,7 +40,7 @@ const LoginUsingRedux = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <label htmlFor="password">Email</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             name="password"
