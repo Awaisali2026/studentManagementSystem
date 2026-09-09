@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addCourse } from "../../store/Features/CourseSlice";
-import { data } from "react-router-dom";
 
 const AddCourse = () => {
   const [title, setTitle] = useState("");
