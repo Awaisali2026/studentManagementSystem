@@ -9,7 +9,6 @@ const Admin = () => {
   const totalCourses = courses.length;
   const totalEnrollments = enrollments.length;
 
-  // How many distinct students have at least one enrollment.
   const studentsWithCourses = enrollments.reduce((ids, enrollment) => {
     if (!ids.includes(enrollment.studentId)) ids.push(enrollment.studentId);
     return ids;

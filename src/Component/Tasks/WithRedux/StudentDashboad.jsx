@@ -1,6 +1,4 @@
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-
 const StudentDashboad = () => {
   const loggedInUser = useSelector((state) => state.auth.user);
   const students = useSelector((state) => state.students);
@@ -47,11 +45,6 @@ const StudentDashboad = () => {
         </div>
       </div>
 
-      <div style={{ display: "flex", gap: "12px" }}>
-        <Link to="/student/available-courses">Browse Available Courses</Link>
-        <Link to="/student/my-course">View My Courses</Link>
-        <Link to="/student/profile">Edit Profile</Link>
-      </div>
     </div>
   );
 };

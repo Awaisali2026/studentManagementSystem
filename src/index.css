@@ -1257,3 +1257,37 @@ button {
   background-color: white;
   border: none;
 }
+
+.student-profile {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.profile-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.profile-card label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.profile-card input {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.profile-card button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.success-message {
+  color: green;
+}

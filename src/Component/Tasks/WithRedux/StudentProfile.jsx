@@ -29,34 +29,31 @@ const StudentProfile = () => {
   }
 
   return (
-    <div style={{ maxWidth: "500px", margin: "40px auto", padding: "20px" }}>
+    <div className="student-profile">
       <h1>My Profile</h1>
 
-      <div
-        style={{
-          border: "1px solid #ddd",
-          borderRadius: "10px",
-          padding: "20px",
-        }}
-      >
+      <div className="profile-card">
         <p>
           <strong>Student ID:</strong> {studentRecord.id}
         </p>
+
         <p>
           <strong>Email:</strong> {loggedInUser.email}
         </p>
 
         <form onSubmit={handleSave}>
           <label htmlFor="name">Name</label>
+
           <input
             id="name"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            style={{ display: "block", width: "100%", margin: "8px 0" }}
           />
+
           <button type="submit">Save</button>
-          {saved && <p style={{ color: "green" }}>Profile updated!</p>}
+
+          {saved && <p className="success-message">Profile updated!</p>}
         </form>
       </div>
     </div>
