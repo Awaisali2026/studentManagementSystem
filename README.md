@@ -24,3 +24,51 @@ https://javascript.plainenglish.io/javascript-interview-questions-based-on-real-
 https://medium.com/@rupalsinghal/siemens-senior-frontend-engineer-interview-24-lpa-package-round-wise-questions-topics-b981b945ef6d
 https://www.interviewhub.dev/
 
+# Video to Watch 
+https://www.youtube.com/watch?v=xp4g7k8r1TE
+
+## authentication and refresh token: 
+https://www.youtube.com/watch?v=7DVpag3cO0g&list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW&index=16
+https://www.youtube.com/watch?v=4TtAGhr61VI
+
+## RBAC (Role based Access Control)
+https://www.youtube.com/watch?v=UhrmPH3TLus
+
+## React Router Protected Route 
+
+youtube.com/watch?v=zKlpiQvPKHI&pp=ygUjUmVhY3QgUm91dGVyIFByb3RlY3RlZCBSb3V0ZSAgOm1lcm4%3D
+
+## Mongoose Schema relationship 
+
+https://www.youtube.com/watch?v=VbGl3msgce8&pp=ygUjTW9uZ29vc2UgU2NoZW1hIHJlbGF0aW9uc2hpcCAgOm1lcm4%3D
+
+## File uploads (Multer) 
+
+https://www.youtube.com/watch?v=6KPXn2Ha0cM&pp=ygUcRmlsZSB1cGxvYWRzIChNdWx0ZXIpICA6bWVybg%3D%3D
+
+
+## TanStack Query 
+https://www.youtube.com/watch?v=mqV5OvbyXcM
+
+## Dashboard Aggregations
+https://www.youtube.com/watch?v=FjqeDWfNFyg
+https://www.youtube.com/watch?v=fDTf1mk-jQg
+
+## Mongodb indexes 
+https://www.youtube.com/watch?v=yo6ZXsgsyBA
+
+## Audit Logging 
+https://www.youtube.com/watch?v=7FHrfo3iHZo
+
+## Express Middleware Architectures 
+https://www.youtube.com/watch?v=gHyZnLZDnWI
+
+## How to build complex UI in any Framework! 
+https://www.youtube.com/watch?v=9-r0RuX0pqk
+
+https://www.youtube.com/watch?v=9-r0RuX0pqk
+https://www.youtube.com/watch?v=Sxxw3qtb3_g
+
+
+
+
